@@ -1,4 +1,4 @@
-package com.company;
+package com.company.search;
 
 public class Exam02 {
 
@@ -10,11 +10,11 @@ public class Exam02 {
     }
 
     // while문
-    public static int seqSearchSen(int[] a, int n, int key){
+    public static int seqSearchSen(int[] a, int n, int key) {
         int i = 0;
         System.out.print("   | ");
         for (int j = 0; j < n; j++) {
-            System.out.print(j+" ");
+            System.out.print(j + " ");
         }
         System.out.println();
         System.out.print("---+");
@@ -23,27 +23,27 @@ public class Exam02 {
         }
         System.out.println();
 
-        while(true){
+        while (true) {
 
-            if(i < n){
+            if (i < n) {
                 System.out.print("   |");
-                for(int j = 0; j < i; j++){
+                for (int j = 0; j < i; j++) {
                     System.out.printf("%2c", ' ');
                 }
                 System.out.printf("%2c", '*');
                 System.out.printf("\n  %d|", i);
-                for(int k : a){
+                for (int k : a) {
                     System.out.printf("%2d", k);
                 }
                 System.out.println();
                 System.out.println("   | ");
             }
 
-            if(i == n){
+            if (i == n) {
                 System.out.println("값이 존재하지 않습니다.");
                 return -1;
-            } else if(a[i] == key){
-                System.out.println(i+"번째에 존재합니다.");
+            } else if (a[i] == key) {
+                System.out.println(i + "번째에 존재합니다.");
                 return i;
             }
             i++;

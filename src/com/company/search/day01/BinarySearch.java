@@ -1,4 +1,4 @@
-package com.company;
+package com.company.search;
 
 public class BinarySearch {
 
@@ -10,7 +10,7 @@ public class BinarySearch {
 
         //System.out.println("\n개수는 : "+searchIdx(a, a.length, 9, b));
 
-        searchDetail(d, d.length, 5);
+        searchDetail(d, d.length, 9);
 
     }
 
@@ -43,8 +43,7 @@ public class BinarySearch {
 
     static int searchDetail(int[] a, int n, int key) {
         int pl = 0;
-        int pr = n-1;
-
+        int pr = n - 1;
 
         System.out.print("   |");
         for (int i = 0; i < n; i++) {
@@ -52,33 +51,40 @@ public class BinarySearch {
         }
         System.out.println();
         System.out.print("---+");
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             System.out.print("--");
         }
         System.out.println();
 
-        System.out.println();
-        do{
-            int pc =(pl + pr) / 2;
-            for(int i = 0; i < n; i++){
-                if(i == pc){
-                    System.out.print("+");
-                }
-                if(i == pl){
+        do {
+            int pc = (pl + pr) / 2;
+
+            System.out.print("  |");
+            for (int i = 0; i < n; i++) {
+                if (i == pc) {
+                    System.out.print(" +");
+                } else if (i == pl) {
                     System.out.print("<-");
-                }
-                if(i == pr){
+                } else if (i == pr) {
                     System.out.print("->");
+                } else {
+                    System.out.print("  ");
                 }
             }
-            if(a[pc] == key){
+            System.out.println();
+
+            System.out.printf("%2d|", pc);
+            for (int j = 0; j < n; j++)
+                System.out.printf("%2d", a[j]);
+            System.out.println();
+            if (a[pc] == key) {
                 return pc;
-            } else if(key > a[pc]){
-                pl = pc+1;
-            } else{
-                pr = pc -1;
+            } else if (key > a[pc]) {
+                pl = pc + 1;
+            } else {
+                pr = pc - 1;
             }
-        }while(pl <= pr);
+        } while (pl <= pr);
         for (int i = 0; i < n; i++) {
             System.out.printf("%2d", a[i]);
         }
