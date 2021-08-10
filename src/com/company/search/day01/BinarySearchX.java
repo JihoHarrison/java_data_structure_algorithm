@@ -1,16 +1,21 @@
-package com.company.search;
+package com.company.search.day01;
 
 public class BinarySearchX {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{7, 7, 7, 7, 7, 7, 7, 8, 8, 9, 9};
+        int[] arr = new int[]{6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 9};
 
         binarySearchX(arr, arr.length, 7);
+
+        System.out.println(binarySearchX(arr, arr.length, 7));
+
+
     }
 
     static int binarySearchX(int[] a, int n, int key) {
         int pl = 0;
         int pr = n - 1;
+        int cnt = 0;
         do {
             int pc = (pl + pr) / 2;
             if (a[pc] == key) {
@@ -20,14 +25,14 @@ public class BinarySearchX {
 //                        break;
 //                    }
 //                }
-                for(int i = 0; i < pc - 1; i++){
-                    if(a[i] == key){
-                        System.out.println(i + "번째에 있습니다.");
-                        return pc;
+                for (pl = pc; pl >= 0; pl--) {
+                    cnt++;
+                    if (a[pl] == key) {
+                        return pl;
                     }
                 }
-                System.out.println(pc + "번째에 있습니다.");
-                return pc;
+                return -1;
+
 
             } else if (a[pc] > key) {
                 pr = pc - 1;

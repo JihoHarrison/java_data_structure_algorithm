@@ -1,4 +1,4 @@
-package com.company.search.day02;
+package com.company.search.day02.search;
 
 /**
  * 2021.08.05

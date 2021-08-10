@@ -1,4 +1,4 @@
-package com.company.search;
+package com.company.search.day01;
 
 public class Exam02 {
 
