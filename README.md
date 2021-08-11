@@ -2,8 +2,6 @@
 ### * language : Java
 ### * Basic Data Structure and Algorithm Solution
 ---
-<img align="center" width="704" alt="JavaDataStructure" src="https://user-images.githubusercontent.com/27722059/128973477-c82a4340-1006-4fe6-86db-ae77a6e32c3e.png">
-
 🌳🌱
 자료구조와 알고리즘을 복습 해 가면서 깃허브에 저장 해 놓기 위해 만들어 놓은 레포지토리 입니다.   
    
