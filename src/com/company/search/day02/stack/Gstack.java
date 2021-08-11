@@ -38,15 +38,15 @@ public class Gstack<ObjectStack> {
     }
 
     public ObjectStack push(ObjectStack x) throws OverflowGstackException {
-        if(ptr >= max){
+        if (ptr >= max) {
             throw new OverflowGstackException();
         } else {
             return stk[ptr++] = x;
         }
     }
 
-    public ObjectStack pop() throws EmptyGStackException{
-        if(ptr <= 0){
+    public ObjectStack pop() throws EmptyGStackException {
+        if (ptr <= 0) {
             throw new EmptyGStackException();
         } else {
             return stk[--ptr];
