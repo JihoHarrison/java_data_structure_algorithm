@@ -42,7 +42,6 @@ public class SharedStack {
         }
     }
 
-
     public int push(StackType st, int x) throws OverflowIntStackException {
         // ptr1이 ptr2와 같을 경우로 분류한다면 ptr1과 ptr2가 겹칠 때 예외 발생시킴!
         if (ptr1 > ptr2) {
