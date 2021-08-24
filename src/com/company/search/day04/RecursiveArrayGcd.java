@@ -32,5 +32,4 @@ public class RecursiveArrayGcd {
         int[] array = new int[]{36, 8, 12, 32, 16};
         System.out.println(gcdArray(array, 0));
     }
-
 }
