@@ -95,7 +95,7 @@ public class IntQueue {
         return num >= max;
     }
 
-    // 큐 안의 터(이터를 머리→꼬리의 차례로 나타냄
+    // 큐 안의 데이터를 머리 -> 꼬리의 차례로 나타냄
     public void dump() {
         if (num <= 0)
             System.out.println("큐가 비었습니다.");
@@ -105,6 +105,4 @@ public class IntQueue {
             System.out.println();
         }
     }
-
-
 }

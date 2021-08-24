@@ -58,7 +58,7 @@ public class IntArrayQueue {
         }
     }
 
-    public int search(int data) {
+    public int indexOf(int data) {
         for (int i = 0; i < num; i++) {
             if (que[i] == data) {
                 return i;
@@ -97,6 +97,4 @@ public class IntArrayQueue {
             System.out.println();
         }
     }
-
-
 }
