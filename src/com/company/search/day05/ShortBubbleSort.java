@@ -6,7 +6,7 @@ package com.company.search.day05;
  * Date: 2021/09/10
  * Time: 7:12 오후
  */
-public class BidirectionBubbleSort {
+public class ShortBubbleSort {
 
     public static void main(String[] args) {
 
