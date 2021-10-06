@@ -7,7 +7,7 @@ package com.company.programmers;
  * Time: 8:46 오전
  */
 
-class Solution {
+class Lotto {
     public int[] solution(int[] lottos, int[] win_nums) {
 
         int zeroCnt = 0, hitCnt = 0, fstCnt = 0, scdCnt = 0;
