@@ -51,34 +51,4 @@ public class StringPress {
         }
         return answer;
     }
-
-//    public static int solution(String s) {
-//
-//        int answer = 0;
-//        int j = 0;
-//        int k = 0;
-//
-//        for (int i = 1; i <= s.length() / 2; i++) {
-//            String res = "";
-//            String prev = s.substring(0, i);
-//            int cnt = 1;
-//            for (j = i; j <= s.length(); j += i) {
-//                String word = "";
-//                if (j + i >= s.length()) word = s.substring(j);
-//                else word = s.substring(j, j + i);
-//                if (prev.equals(word)) cnt++;
-//                else {
-//                    if (cnt > 1) {
-//                        res += cnt;
-//                    }
-//                    res += prev;
-//                    prev = word;
-//                    cnt = 1;
-//                }
-//            }
-//            answer = Math.min(answer, res.length());
-//        }
-//        return answer;
-//    }
-
 }
