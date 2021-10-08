@@ -18,7 +18,6 @@ class Lotto {
             if (lottos[i] == 0) zeroCnt++;
             for (int j = 0; j < win_nums.length; j++) {
                 if (lottos[i] == win_nums[j]) hitCnt++;
-
             }
         }
 
