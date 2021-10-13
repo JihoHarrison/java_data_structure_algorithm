@@ -19,7 +19,6 @@ public class StringPress {
 
         String answer = "";
         int j = 0;
-        int k = 0;
 
         for (int i = 1; i <= s.length() / 2; i++) {
             String result = "";
@@ -42,7 +41,6 @@ public class StringPress {
                     // 길이가 다 됐을 때 남은 값은 더이상 안쪽 for문을 타지 않으므로 밖에서 한번 더 붙여준다.
                     // 남지 않고 계속 for문을 탈때는 어차피 남는 부분이 없이 공백이기 때문에...!
                     left = right;
-                    //System.out.println(left);
                     cnt = 1;
                 }
             }
