@@ -21,6 +21,7 @@ public class Covid19 {
                 cusTable[i] = places[i][j].split("");
                 for (int k = 0; k < 5; k++) { // 여기가 각 문자열의 요소 반복문
                     // cusTable[i][k];
+
                 }
             }
         }
