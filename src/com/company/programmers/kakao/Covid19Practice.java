@@ -65,7 +65,6 @@ public class Covid19Practice {
         return 1;
     }
 
-
     public static String[][] makeTable(String[] places) {
         String[][] newCusTable = new String[5][5];
         for (int i = 0; i < places.length; i++) {
