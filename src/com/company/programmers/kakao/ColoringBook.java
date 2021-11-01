@@ -40,7 +40,7 @@ public class ColoringBook {
         visited[start] = true;
         q.offer(start);
 
-        while(!q.isEmpty()){
+        while(!q.isEmpty()){ 
             int now = q.poll();
             answer[cnt++] = now;
             for(int i = 0; i < graph[now].length; i++){
