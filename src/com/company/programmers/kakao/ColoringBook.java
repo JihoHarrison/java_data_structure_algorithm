@@ -41,7 +41,6 @@ public class ColoringBook {
                     cnt = 1;
                     bfs(i, j, m, n, picture);
                     numberOfArea++;
-                    System.out.println(numberOfArea);
                     if(cnt > maxSizeOfOneArea){
                         maxSizeOfOneArea = cnt;
                     }
@@ -68,6 +67,7 @@ public class ColoringBook {
                     if (graph[nx][ny] == graph[x][y] && !visited[nx][ny]) {
                         visited[nx][ny] = true;
                         q.offer(new Node(nx, ny));
+                        // cnt는 면적 계산
                         cnt++;
                     }
                 }
