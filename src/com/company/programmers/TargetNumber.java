@@ -5,6 +5,7 @@ package com.company.programmers;
  * User: sinjiho
  * Date: 2021/11/10
  * Time: 4:42 오후
+ * description : 백트래킹 쓰는데 조건 안걸리고 리턴도 없는 기괴한 형식.. 재귀에 좀 익숙해지면 다같이 리뷰 해 봅시당..
  */
 class TargetNumber {
     static boolean[] visited;
@@ -12,7 +13,7 @@ class TargetNumber {
 
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = {1, 1, 1, 1, 1};
 
         solution(arr, 3);
 
@@ -30,25 +31,16 @@ class TargetNumber {
     public static void recursive(int[] numbers, int idx, int target) {
         //연산 부분
         int total = 0;
-        //int a = 0;
-        //int b = 0;
         for (int i = 0; i < numbers.length; i++) {
             System.out.print(visited[i] + " ");
             if (visited[i]) {
-                //b = numbers[i];
                 total += numbers[i];
-                System.out.print(numbers[i] + " ");
             } else {
-                //a = numbers[i] * (-1);
                 total += numbers[i] * (-1);
-                System.out.print(numbers[i] * (-1) + " ");
             }
-            //System.out.print(a + " ");
-            //System.out.print(b + " ");
-            //System.out.print(visited[i] + " ");
         }
 
-        //System.out.println();
+        System.out.println();
         //타겟과 맞는지확인
         if (total == target) {
             cnt++;
@@ -57,12 +49,8 @@ class TargetNumber {
         //재귀 로직
         for (int i = idx; i < numbers.length; i++) {
             visited[i] = true;
-            //System.out.print(i + " -> ");
-            System.out.println(i+1 + " got true");
             recursive(numbers, i + 1, target);
-            //System.out.println(i + "");
             visited[i] = false;
-            System.out.println(i + " got false");
         }
     }
 }
