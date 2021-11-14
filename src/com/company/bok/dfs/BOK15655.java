@@ -47,9 +47,9 @@ public class BOK15655 {
 
             if (!isVisited[j]) {
                 isVisited[j] = true;
+                System.out.println(depth + " depth");
                 result[depth] = arr[j];
                 dfs(depth + 1);
-                System.out.println(depth);
                 //System.out.println(depth + " 22");
                 isVisited[j] = false;
             }
