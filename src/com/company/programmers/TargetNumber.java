@@ -31,6 +31,7 @@ class TargetNumber {
     public static void recursive(int[] numbers, int idx, int target) {
         //연산 부분
         int total = 0;
+
         for (int i = 0; i < numbers.length; i++) {
             System.out.print(visited[i] + " ");
             if (visited[i]) {
@@ -48,8 +49,10 @@ class TargetNumber {
 
         //재귀 로직
         for (int i = idx; i < numbers.length; i++) {
+
             visited[i] = true;
             recursive(numbers, i + 1, target);
+            System.out.println(i);
             visited[i] = false;
         }
     }
