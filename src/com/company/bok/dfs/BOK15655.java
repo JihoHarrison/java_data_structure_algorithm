@@ -31,8 +31,6 @@ public class BOK15655 {
         }
 
         dfs(0);
-
-
     }
 
     public static void dfs(int depth) {
@@ -47,10 +45,8 @@ public class BOK15655 {
 
             if (!isVisited[j]) {
                 isVisited[j] = true;
-                System.out.println(depth + " depth");
                 result[depth] = arr[j];
                 dfs(depth + 1);
-                //System.out.println(depth + " 22");
                 isVisited[j] = false;
             }
         }

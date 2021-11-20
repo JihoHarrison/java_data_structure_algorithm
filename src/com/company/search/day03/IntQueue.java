@@ -9,13 +9,13 @@ public class IntQueue {
     private int[] que; // 큐의 본체
 
     // 실행할 때 예외：큐가 비어 있음
-    public class EmptyIntQueueException extends RuntimeException {
+    public static class EmptyIntQueueException extends RuntimeException {
         public EmptyIntQueueException() {
         }
     }
 
     // 실행할 때 예외：큐가 가득 참
-    public class OverflowIntQueueException extends RuntimeException {
+    public static class OverflowIntQueueException extends RuntimeException {
         public OverflowIntQueueException() {
         }
     }
