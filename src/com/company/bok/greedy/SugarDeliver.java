@@ -17,10 +17,7 @@ public class SugarDeliver {
         int N = scan.nextInt();
 
 
-
-
     }
-
 
 
 }
