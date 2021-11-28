@@ -1,5 +1,10 @@
 package com.company.bok.dfs;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
 /**
  * Created by JihoKevin.
  * User: sinjiho
@@ -7,54 +12,50 @@ package com.company.bok.dfs;
  * Time: 8:12 오후
  */
 public class BOK2210 {
+    static int[] dx = {0, -1, 0, 1};
+    static int[] dy = {-1, 0, 1, 0};
 
-    public static int[][] arr = {{1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}, {1, 1, 1, 2, 1}, {1, 1, 1, 1, 1}};
-    public static boolean[][] visited = new boolean[5][5];
-    public static int[] answer = new int[6];
+    public static int[][] arr = new int[5][5];
+    public static List answer = new ArrayList<String>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        dfs(0, 0, 0, 0);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+
+        for (int i = 0; i < 5; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < 5; j++) {
+                arr[i][j] = Integer.parseInt(st.nextToken());
+            }
+        }
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                dfs(i, j, 0, "");
+            }
+        }
 
     }
 
-    public static void dfs(int x, int y, int cnt, int depth) {
+    public static void dfs(int x, int y, int depth, String str) {
 
-        if (depth == answer.length) {
-
-            for (int i = 0; i < 6; i++) {
-                System.out.print(answer[i] + " ");
+        if (depth == 6) {
+            if (!answer.contains(str)) {
+                answer.add(str);
+                System.out.println(str);
             }
-            System.out.println();
             return;
         }
 
-        // 위로 이동 가능하면 이동
-        if (y >= 0) {
-            if (y - 1 < 0) {
-                y = 5;
+        for (int j = 0; j < 4; j++) {
+            int nowX = x + dx[j];
+            int nowY = y + dy[j];
+
+            if (0 > nowX || nowX >= 5 || 0 > nowY || nowY >= 5) {
+                continue;
             }
-            if (!visited[y - 1][x]) {
-                visited[y - 1][x] = true;
-                answer[cnt + 1] = arr[y - 1][x];
-                dfs(x, y - 1, cnt, depth + 1);
-            }
+            dfs(nowX, nowY, depth + 1, str + arr[x][y]);
         }
-        // 아래로 이동할 수 있다면 이동
-        if (y <= 5 - 1) {
-            if (y >= 4) {
-                y = 0;
-            }
-            if (!visited[y + 1][x]) {
-                visited[y + 1][x] = true;
-                answer[cnt + 1] = arr[y + 1][x];
-                dfs(x, y + 1, cnt, depth + 1);
-            }
-
-        }
-        visited[y][x] = false;
-
-
     }
-
 }
