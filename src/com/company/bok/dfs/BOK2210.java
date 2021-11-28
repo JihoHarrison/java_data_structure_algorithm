@@ -52,23 +52,6 @@ public class BOK2210 {
             }
 
         }
-//        // 왼쪽으로 이동할 수 있다면 이동
-//        if (x >= 0) {
-//            if (x - 1 < 0) {
-//
-//            }
-//            if(!visited[y][x - 1]) {
-//
-//            }
-//            visited[y][x - 1] = true;
-//            dfs(x - 1, y, cnt, depth + 1);
-//        }
-//        // 오른쪽으로 이동할 수 있다면 이동
-//        if (x < 5 - 1 && visited[y][x + 1]) {
-//            visited[y][x + 1] = true;
-//            dfs(x + 1, y, depth + 1);
-//        }
-
         visited[y][x] = false;
 
 
