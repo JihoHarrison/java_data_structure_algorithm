@@ -35,7 +35,6 @@ public class BOK2210 {
                 dfs(i, j, 0, "");
             }
         }
-
     }
 
     public static void dfs(int x, int y, int depth, String str) {
