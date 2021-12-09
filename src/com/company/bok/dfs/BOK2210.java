@@ -25,10 +25,12 @@ public class BOK2210 {
 
         for (int i = 0; i < 5; i++) {
             st = new StringTokenizer(br.readLine());
+            String str = "";
             for (int j = 0; j < 5; j++) {
                 arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
+        System.out.println();
 
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {

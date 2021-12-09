@@ -11,6 +11,7 @@ public class NewIdRecommand {
 
     public static void main(String[] args) {
         String new_id = "...!@BaT#*..y.abcdefghijklm";
+        String ids = 	"z-+.^.";
         StringBuilder sb = new StringBuilder(new_id);
         System.out.println(solution(new_id));
     }
@@ -44,7 +45,7 @@ public class NewIdRecommand {
             str = str.replaceAll("[.]$", "");
 
             while ((str.length() < 3)) {
-                str += "a";
+                str += str.charAt(str.length() - 1);
             }
             answer = str;
 
