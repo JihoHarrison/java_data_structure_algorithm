@@ -67,6 +67,7 @@ public class BOK2667 {
                 continue;
             }
             if (arr[nowX][nowY] == 1 && !visited[nowX][nowY]) {
+                //count++;
                 dfs(nowX, nowY, arr);
             }
         }

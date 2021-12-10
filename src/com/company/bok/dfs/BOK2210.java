@@ -27,7 +27,8 @@ public class BOK2210 {
             st = new StringTokenizer(br.readLine());
             String str = "";
             for (int j = 0; j < 5; j++) {
-                arr[i][j] = Integer.parseInt(st.nextToken());
+                while(st.hasMoreTokens())
+                    arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
         System.out.println();
