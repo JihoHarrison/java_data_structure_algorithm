@@ -41,7 +41,7 @@ public class CandidateKey {
 
         for (int i = 0; i < relation[0].length; i++) { // 4
             boolean[] visited = new boolean[relation[0].length];
-            dfs(visited, 0, 0, i + 1, relation);
+            dfs(visited, 0, i + 1, relation);
         }
 
         answer = candi.size();
@@ -49,7 +49,7 @@ public class CandidateKey {
         return answer;
     }
 
-    public static void dfs(boolean[] visited, int start, int depth, int end, String[][] relation) {
+    public static void dfs(boolean[] visited, int depth, int end, String[][] relation) {
         if (depth == end) {
             List<Integer> list = new ArrayList<>();
             String key = "";
@@ -72,22 +72,22 @@ public class CandidateKey {
                 if (map.containsKey(s)) {
                     return;
                 } else {
-                    map.put(s, 0); // 100ryan, 0       200apeach, 0      ......  600apeach, 0
+                    map.put(s, 0); // 100ryan, 0     200apeach, 0    ......  600apeach, 0
                 }
             }
 
             // 후보키 추가
             for (String s : candi) { // 0
-                System.out.println(s + "  !!!!");
-                System.out.println("candi : " + candi);
+//                System.out.println(s + "  !!!!");
+//                System.out.println("candi : " + candi);
 
                 int count = 0;
                 for (int i = 0; i < key.length(); i++) {// 0, 1
 
                     String subS = String.valueOf(key.charAt(i)); // 0, 1
-                    System.out.println("key : " + key);
-                    System.out.println("subS : " + subS);
-                    System.out.println("s : " + s);
+//                    System.out.println("key : " + key);
+//                    System.out.println("subS : " + subS);
+//                    System.out.println("s : " + s);
                     if (s.contains(subS)) count++; // 2
                 }
                 System.out.println();
@@ -98,10 +98,10 @@ public class CandidateKey {
             return;
         }
 
-        for (int i = start; i < visited.length; i++) {
+        for (int i = 0; i < visited.length; i++) {
             if (!visited[i]) {
                 visited[i] = true;
-                dfs(visited, i, depth + 1, end, relation);
+                dfs(visited, depth + 1, end, relation);
                 visited[i] = false;
             }
         }

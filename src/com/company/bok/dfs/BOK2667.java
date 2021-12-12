@@ -45,7 +45,6 @@ public class BOK2667 {
         for(int i = 0; i < answers.length; i++) {
             if(answers[i] != 0) System.out.println(answers[i]);
         }
-
     }
 
     public static void dfs(int x, int y) {
