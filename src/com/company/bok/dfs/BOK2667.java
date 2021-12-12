@@ -42,8 +42,8 @@ public class BOK2667 {
         System.out.println(count);
         Arrays.sort(answers);
 
-        for(int i = 0; i < answers.length; i++) {
-            if(answers[i] != 0) System.out.println(answers[i]);
+        for (int i = 0; i < answers.length; i++) {
+            if (answers[i] != 0) System.out.println(answers[i]);
         }
     }
 
