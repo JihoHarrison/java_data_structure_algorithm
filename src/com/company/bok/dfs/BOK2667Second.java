@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * Created by JihoKevin.
- * User: sinjiho
+ * User: sinjiho4
  * Date: 2021/12/12
  * Time: 3:38 오후
  */
