@@ -42,17 +42,5 @@ public class BOK10451 {
             }
             System.out.println();
         }
-
-
-
-
-
-
     }
-
-
-
-
-
-
 }

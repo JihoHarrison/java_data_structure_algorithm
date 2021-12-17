@@ -54,9 +54,7 @@ public class BOK2606 {
         for (int k : lists[start]) {
             if (!visited[k]) {
                 count++;
-                //System.out.print(k + " ");
                 dfs(k, visited, lists);
-                //System.out.print(k + " ");
             }
         }
         return count;
