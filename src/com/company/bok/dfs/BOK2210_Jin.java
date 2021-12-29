@@ -2,7 +2,7 @@ package com.company.bok.dfs;
 
 import java.util.*;
 
-class BOK2210_JIn {
+class BOJ2210_JIn {
     public static int[] arr;
     public static boolean[] visited;
     public static ArrayList<int[]> answerSet = new ArrayList<>();

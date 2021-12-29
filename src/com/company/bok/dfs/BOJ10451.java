@@ -12,7 +12,7 @@ import java.util.Scanner;
  * Time: 1:43 오전
  * desc: 인접리스트 연습
  */
-public class BOK10451 {
+public class BOJ10451 {
 
     public static ArrayList<ArrayList<Integer>> adList = new ArrayList<ArrayList<Integer>>();
 

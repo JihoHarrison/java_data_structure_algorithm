@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Date: 2021/11/22
  * Time: 9:58 오후
  */
-public class BOK11399 {
+public class BOJ11399 {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);

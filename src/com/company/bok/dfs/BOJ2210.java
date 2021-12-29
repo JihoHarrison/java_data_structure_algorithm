@@ -11,7 +11,7 @@ import java.util.*;
  * Date: 2021/11/17
  * Time: 8:12 오후
  */
-public class BOK2210 {
+public class BOJ2210 {
     static int[] dx = {0, -1, 0, 1};
     static int[] dy = {-1, 0, 1, 0};
 

@@ -8,7 +8,7 @@ import java.util.*;
  * Date: 2021/11/13
  * Time: 1:48 오전
  */
-public class BOK15655 {
+public class BOJ15655 {
 
     private static int size;
     private static int[] arr;

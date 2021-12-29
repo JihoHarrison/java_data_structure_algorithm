@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Date: 2021/11/25
  * Time: 12:04 오전
  */
-public class BOK1493 {
+public class BOJ1493 {
 
     public static void main(String[] args) {
 

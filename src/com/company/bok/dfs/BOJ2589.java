@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Date: 2021/12/10
  * Time: 4:27 오후
  */
-public class BOK2589 {
+public class BOJ2589 {
     private static int R; // 행
     private static int C; // 열
     private static int[] dr = new int[]{-1, 0, 1, 0};

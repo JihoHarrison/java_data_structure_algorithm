@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Date: 2021/12/08
  * Time: 3:09 오후
  */
-public class BOK2606 {
+public class BOJ2606 {
 
     public static int count = 0;
 

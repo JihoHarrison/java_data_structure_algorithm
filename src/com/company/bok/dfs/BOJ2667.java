@@ -8,7 +8,7 @@ import java.util.*;
  * Date: 2021/12/09
  * Time: 12:31 오후
  */
-public class BOK2667 {
+public class BOJ2667 {
 
     static int[] dx = {0, -1, 0, 1};
     static int[] dy = {-1, 0, 1, 0};

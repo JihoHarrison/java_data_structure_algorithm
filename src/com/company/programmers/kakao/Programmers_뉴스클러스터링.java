@@ -28,8 +28,6 @@ public class Programmers_뉴스클러스터링 {
         // 0, 1, 2, 3, 4, 5
         for(int i = 0; i < str1.length(); i++) {
 
-            String str = firstStrArray + firstStrArray.charAt(i+1);
-
 
 //            if(i == str1.length() - 1) {
 //

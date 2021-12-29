@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Date: 2021/12/12
  * Time: 3:38 오후
  */
-public class BOK2667Second {
+public class BOJ2667Second {
     private static int dx[] = {0, 0, 1, -1};
     private static int dy[] = {1, -1, 0, 0};
     private static int[] aparts = new int[25 * 25];
