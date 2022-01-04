@@ -29,7 +29,7 @@ public class CandidateKey {
                 "600", "apeach", "music", "2"
         }};
 
-        solution(tables);
+        System.out.println(solution(tables));
     }
 
     public static List<String> candi = new ArrayList<>();
@@ -95,7 +95,7 @@ public class CandidateKey {
             }
             candi.add(key);
 
-            return;
+            //return;
         }
 
         for (int i = 0; i < visited.length; i++) {
