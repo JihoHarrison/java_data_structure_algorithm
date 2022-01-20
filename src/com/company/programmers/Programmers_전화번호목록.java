@@ -1,9 +1,7 @@
 package com.company.programmers;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 
 /**
  * Created by JihoKevin.
