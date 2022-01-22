@@ -18,7 +18,7 @@ public class Programmers_124나라의숫자 {
         String answer = "";
 
         for(int i = 0; i < n; i++){
-            
+
         }
 
         return answer;
