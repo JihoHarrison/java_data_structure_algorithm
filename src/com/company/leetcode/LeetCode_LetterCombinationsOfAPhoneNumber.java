@@ -16,7 +16,7 @@ public class LeetCode_LetterCombinationsOfAPhoneNumber {
 
     public static void main(String[] args) {
 
-        String digits = "234";
+        String digits = "28";
 
         System.out.println(letterCombinations(digits));
     }
