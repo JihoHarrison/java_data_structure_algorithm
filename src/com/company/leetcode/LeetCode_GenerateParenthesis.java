@@ -31,11 +31,13 @@ public class LeetCode_GenerateParenthesis {
         }
 
         if (n > open) {
+            //System.out.println(temp + "fir");
             dfs(n, open + 1, close, temp + "(", result);
-            System.out.println(temp);
+
         }
 
         if (close < open) {
+            System.out.println(temp + "sec");
             dfs(n, open, close + 1, temp + ")", result);
         }
     }
