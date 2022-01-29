@@ -16,10 +16,11 @@ public class LinkedListNode {
         this.data = data;
     }
 
+
     public void addNode(int data) {
         LinkedListNode end = new LinkedListNode(data);
         LinkedListNode n = this;
-
+        System.out.println(n);
         while (n.next != null) {
             n = n.next;
         }
