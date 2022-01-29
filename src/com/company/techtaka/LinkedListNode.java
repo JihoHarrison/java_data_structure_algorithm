@@ -19,7 +19,7 @@ public class LinkedListNode {
     public void addNode(int data) {
         LinkedListNode end = new LinkedListNode(data);
         LinkedListNode n = this;
-
+        System.out.println();
         while (n.next != null) {
             n = n.next;
         }
