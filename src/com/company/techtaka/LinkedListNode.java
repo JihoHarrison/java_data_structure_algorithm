@@ -16,13 +16,28 @@ public class LinkedListNode {
         this.data = data;
     }
 
-    public void addNode(int data) {
+//    public void addNode(int data) {
+//        LinkedListNode end = new LinkedListNode(data);
+//        LinkedListNode n = this;
+//        System.out.println();
+//        while (n.next != null) {
+//            n = n.next;
+//        }
+//        n.next = end;
+//    }
+
+    public void append(int data) {
         LinkedListNode end = new LinkedListNode(data);
         LinkedListNode n = this;
-        System.out.println();
-        while (n.next != null) {
+        while(n.next != null){
             n = n.next;
         }
         n.next = end;
     }
+
+
+
+
+
+
 }
