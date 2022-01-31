@@ -16,29 +16,28 @@ public class LinkedListNode {
         this.data = data;
     }
 
-    /**
-     * 요소 추가 메서드
-     **/
-    public void addNode(int data) {
-        LinkedListNode node = new LinkedListNode(data);
+//    public void addNode(int data) {
+//        LinkedListNode end = new LinkedListNode(data);
+//        LinkedListNode n = this;
+//        System.out.println();
+//        while (n.next != null) {
+//            n = n.next;
+//        }
+//        n.next = end;
+//    }
+
+    public void append(int data) {
+        LinkedListNode end = new LinkedListNode(data);
         LinkedListNode n = this;
-        while (n.next != null) {
+        while(n.next != null){
             n = n.next;
         }
-        n.next = node;
+        n.next = end;
     }
 
-    /**
-     * 삭제 메서드
-     **/
-    public void deleteNode(int data) {
-        LinkedListNode n = this;
-        while (n.next != null) {
-            if (n.next.data == data) {
-                n.next = n.next.next;
-            } else {
-                n = n.next;
-            }
-        }
-    }
+
+
+
+
+
 }
