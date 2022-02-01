@@ -53,20 +53,16 @@ public class QuickSort {
 
     public static void quickSort(int[] a, int start, int end) {
         int part = partition(a, start, end);
-        if(start < part - 1) {
-            quickSort(a, start, part - 1);
-        }
-        if(part < end) {
-            quickSort(a, part, end);
-        }
+        if (start < part - 1) quickSort(a, start, part - 1);
+        if (end > part) quickSort(a, part, end);
     }
 
     public static int partition(int[] a, int start, int end) {
         int pivot = a[(start + end) / 2];
-        while(start <= end) {
-            while(a[start] < pivot) start++;
-            while(a[end] > pivot) end--;
-            if(start <= end) {
+        while (start <= end) {
+            while (a[start] < pivot) start++;
+            while (a[end] > pivot) end--;
+            if (start <= end) {
                 swap(a, start, end);
                 start++;
                 end--;
