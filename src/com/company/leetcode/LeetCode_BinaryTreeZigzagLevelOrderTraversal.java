@@ -37,9 +37,9 @@ public class LeetCode_BinaryTreeZigzagLevelOrderTraversal {
     }
 
     public static void dfs(int level, TreeNode node, List<List<Integer>> result) {
-        if(node == null) return;
-        if(level == result.size()) result.add(new ArrayList<Integer>());
-        if(level % 2 == 0) result.get(level).add(0, node.value);
+        if (node == null) return;
+        if (level == result.size()) result.add(new ArrayList<Integer>());
+        if (level % 2 == 0) result.get(level).add(0, node.value);
         else result.get(level).add(node.value);
         dfs(level + 1, node.left, result);
         dfs(level + 1, node.right, result);

@@ -35,6 +35,17 @@ public class LinkedListNode {
         n.next = end;
     }
 
+    public void deleteNode(int key) {
+        LinkedListNode root = this;
+        while(root.next != null) {
+            if(root.next.data == key) {
+                root.next = root.next.next;
+            }else {
+                root = root.next;
+            }
+        }
+    }
+
 
 
 
