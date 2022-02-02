@@ -10,15 +10,17 @@ public class Programmers_프렌즈4블록 {
 
     public static void main(String[] args) {
 
-        String[] board = {"TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"};
-        System.out.println(solution(6, 6, board));
+        String[] board01 = {"TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"};
+        String[] board02 = {"CCBDE", "AAADE", "AAABF", "CCBBF"};
+        System.out.println(solution(6, 6, board01));
+        System.out.println(solution(4, 5, board02));
 
     }
 
     public static int solution(int m, int n, String[] board) {
         int answer = 0;
         boolean letsCrash = true;
-        char[][] map = new char[m][n];
+        char[][] map = new char[n][m];
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -31,10 +33,10 @@ public class Programmers_프렌즈4블록 {
             letsCrash = false;
 
             // 한 번 돌 때 마다 부숴줘야 하는 부분을 새롭게 판별해야 하므로 while문 안쪽에서 생성
-            boolean[][] visited = new boolean[m][n];
+            boolean[][] visited = new boolean[n][m];
 
-            for (int i = 0; i < m - 1; i++) {
-                for (int j = 0; j < n - 1; j++) {
+            for (int i = 0; i < n - 1; i++) {
+                for (int j = 0; j < m - 1; j++) {
 
                     if (map[i][j] == '0') continue;
 
@@ -51,8 +53,8 @@ public class Programmers_프렌즈4블록 {
             }
 
             // 팝 해야 할 곳을 판별 후 팝 한다음 빈자리 채워주기
-            for (int i = 0; i < m; i++) {
-                for (int j = 0; j < n; j++) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
                     if (visited[i][j]) {
                         answer++;
                         for (int k = j - 1; k >= 0; k--) {
