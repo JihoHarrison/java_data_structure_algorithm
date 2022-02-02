@@ -18,7 +18,7 @@ public class Programmers_소수찾기 {
 
     public static void main(String[] args) {
 
-        String str = "1230";
+        String str = "011";
 
         System.out.println(solution(str));
 
@@ -34,6 +34,7 @@ public class Programmers_소수찾기 {
 
         for (int i = 0; i < strArr.length; i++) {
             strArr[i] = Character.toString(numbers.charAt(i));
+            System.out.println(strArr[i] + " ");
         }
 
         for (int i = 0; i < strNumbers.length; i++) {
@@ -63,11 +64,9 @@ public class Programmers_소수찾기 {
         for (int i = 0; i < numbers.length; i++) {
             if (!visited[i]) {
                 visited[i] = true;
-                result += numbers[i];
-                dfs(start + 1, end, result, numbers);
+                dfs(start + 1, end, result += numbers[i], numbers);
                 // 탐색 한 번이 끝나고 다른 숫자를 넣어주었을 때 한번 초기화 해준다.
                 result = result.substring(0, result.length() - 1);
-                System.out.println(result);
                 visited[i] = false;
             }
         }

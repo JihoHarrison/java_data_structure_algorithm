@@ -14,6 +14,7 @@ public class Programmers_가장큰수 {
 
         //int[] numbers = {6, 10, 2};
         int[] numbers = {3, 30, 34, 5, 9};
+        //int[] numbers = {0, 0, 0, 0, 00, 000, 00000};
 
         System.out.println(solution(numbers));
 
