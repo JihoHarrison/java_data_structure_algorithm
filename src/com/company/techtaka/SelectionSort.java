@@ -9,9 +9,8 @@ package com.company.techtaka;
 public class SelectionSort {
 
     public static void selectionSort(int[] a) {
-
-        int size = a.length;
         int min;
+        int size = a.length;
         int temp;
 
         for (int i = 0; i < size - 1; i++) {
@@ -21,7 +20,6 @@ public class SelectionSort {
                     min = j;
                 }
             }
-
             temp = a[min];
             a[min] = a[i];
             a[i] = temp;

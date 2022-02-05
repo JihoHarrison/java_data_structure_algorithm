@@ -12,7 +12,10 @@ public class ex_01 {
 
     public static void main(String[] args) {
 
-        System.out.println(fibo(6));
+        for(int i = 1; i <= 6; i++) {
+            System.out.println(fibo(i));
+        }
+
     }
 
     public static int fibo(int n) {
