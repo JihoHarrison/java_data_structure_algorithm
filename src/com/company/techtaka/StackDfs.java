@@ -10,21 +10,48 @@ import java.util.Stack;
  */
 public class StackDfs {
 
-//    public void DFS(int start){
-//        boolean[] visited = new boolean[vertex];
-//        Stack<Integer> stack = new Stack<Integer>();
-//        stack.push(start);
-//        while (!stack.isEmpty()){
-//            int v = stack.pop();
-//            if (!visited[v]){
-//                visited[v] = true;
-//                for (int i = 0; i < list[v].size(); i++){
-//                    int dest = list[v].get(i);
-//                    if (!visited[dest])
-//                        stack.push(dest);
-//                }
-//            }
-//        }
-//    }
 
+    public static void main(String[] args) {
+
+        int[] a = {9, 1, 4, 2, 3, 7, 5, 8, 4};
+        quickSort(a, 0, a.length - 1);
+
+        for (int i : a) {
+            System.out.print(i + " ");
+        }
+
+    }
+
+    public static void quickSort(int[] a, int start, int end) {
+        int part = partition(a, start, end);
+
+        if (start < part - 1) {
+            quickSort(a, start, part - 1);
+        }
+        if (part < end) {
+            quickSort(a, part, end);
+        }
+    }
+
+    public static int partition(int[] a, int start, int end) {
+        int mid = a[(start + end) / 2];
+
+        while (start <= end) {
+            while (a[start] < mid) start++;
+            while (a[end] > mid) end--;
+            if (start <= end) {
+                swap(a, start, end);
+                start++;
+                end--;
+            }
+        }
+
+        return start;
+    }
+
+    public static void swap(int[] a, int start, int end) {
+        int temp = a[start];
+        a[start] = a[end];
+        a[end] = temp;
+    }
 }
