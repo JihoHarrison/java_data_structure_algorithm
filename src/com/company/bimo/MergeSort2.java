@@ -4,9 +4,10 @@ package com.company.bimo;
  * Created by JihoKevin.
  * User: sinjiho
  * Date: 2022/02/08
- * Time: 1:37 오후
+ * Time: 1:58 오후
  */
-public class MergeSort {
+public class MergeSort2 {
+
 
     public static void main(String[] args) {
 
@@ -39,9 +40,12 @@ public class MergeSort {
             }
             index++;
         }
+
         for (int i = 0; i <= mid - part1; i++) {
             a[index + i] = tmp[part1 + i];
         }
+
     }
+
 
 }
