@@ -4,11 +4,12 @@ package com.company.bimo;
  * Created by JihoKevin.
  * User: sinjiho
  * Date: 2022/02/08
- * Time: 1:37 오후
+ * Time: 3:28 오후
  */
-public class MergeSort {
+public class MergeSort3 {
 
     public static void main(String[] args) {
+
         int[] a = {9, 1, 4, 2, 3, 7, 5, 8, 4};
         int[] tmp = new int[a.length];
         mergeSort(a, tmp, 0, a.length - 1);
@@ -16,10 +17,10 @@ public class MergeSort {
         for (int i : a) {
             System.out.print(i + " ");
         }
+
     }
 
     public static void mergeSort(int[] a, int[] tmp, int start, int end) {
-        // 이 부분 조심 작거나 같게 아님!
         if (start < end) {
             int mid = (start + end) / 2;
             mergeSort(a, tmp, start, mid);
@@ -29,7 +30,7 @@ public class MergeSort {
     }
 
     public static void merge(int[] a, int[] tmp, int start, int mid, int end) {
-        for (int i = start; i <= end; i++) {
+        for (int i = 0; i <= end; i++) {
             tmp[i] = a[i];
         }
         int part1 = start;
@@ -46,9 +47,9 @@ public class MergeSort {
             }
             index++;
         }
-        for (int i = 0; i <= mid - part1; i++) {
+
+        for (int i = start; i <= mid - part1; i++) {
             a[index + i] = tmp[part1 + i];
         }
     }
-
 }
