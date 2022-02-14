@@ -1,6 +1,5 @@
-package com.company.bok.greedy;
+package com.company.boj.greedy;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 

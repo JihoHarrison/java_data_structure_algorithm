@@ -1,4 +1,4 @@
-package com.company.bok.dfs;
+package com.company.boj.dfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;

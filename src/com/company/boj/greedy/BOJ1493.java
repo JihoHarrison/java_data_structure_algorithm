@@ -1,4 +1,4 @@
-package com.company.bok.greedy;
+package com.company.boj.greedy;
 
 import java.util.Scanner;
 

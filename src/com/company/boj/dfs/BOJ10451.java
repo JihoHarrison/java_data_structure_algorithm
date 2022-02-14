@@ -1,7 +1,6 @@
-package com.company.bok.dfs;
+package com.company.boj.dfs;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Scanner;
 
