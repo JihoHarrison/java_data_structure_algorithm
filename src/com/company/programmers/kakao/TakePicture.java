@@ -26,7 +26,7 @@ public class TakePicture {
     }
 
     public static void dfs(String names, boolean[] isVisited, String[] datas) {
-        if (names.length() == kakaoFriendNames.length - 1) {
+        if (names.length() == kakaoFriendNames.length) {
             if (check(names, datas)) {
                 totalCnt++;
             }
