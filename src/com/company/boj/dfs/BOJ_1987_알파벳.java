@@ -1,7 +1,5 @@
 package com.company.boj.dfs;
 
-import java.util.Scanner;
-
 /**
  * Created by JihoKevin.
  * User: sinjiho
