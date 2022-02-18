@@ -11,6 +11,7 @@ import java.util.List;
  * Date: 2022/02/18
  * Time: 2:34 오전
  * desc: key에 해당하는 점수의 총 개수 - 점수보다 크거나 같은 처음 index = 특정 점수 이상 점수 개수
+ *       걍 너무 어렵다..ㅠㅠ
  */
 public class Programmers_순위검색 {
 
