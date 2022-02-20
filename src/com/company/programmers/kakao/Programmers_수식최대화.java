@@ -1,8 +1,6 @@
 package com.company.programmers.kakao;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.regex.Pattern;
 
 /**
  * Created by JihoKevin.
