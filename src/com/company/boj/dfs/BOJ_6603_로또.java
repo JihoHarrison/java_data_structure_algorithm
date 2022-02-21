@@ -19,13 +19,15 @@ public class BOJ_6603_로또 {
         while (true) {
             int k = scan.nextInt();
 
-            if (k == 0) break;
+            if (k == 0) {
+                break;
+            }
             lotto = new int[k];
             visited = new boolean[k];
             for (int i = 0; i < k; i++) {
                 lotto[i] = scan.nextInt();
             }
-
+            System.out.println();
             dfs(0, 0, lotto, visited);
         }
     }
