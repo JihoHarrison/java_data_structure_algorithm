@@ -7,6 +7,7 @@ import java.util.Scanner;
  * User: sinjiho
  * Date: 2022/02/24
  * Time: 7:26 오후
+ * desc: 2차원 배열을 1차원 배열로 생각해야하는 문제.. 난 이렇게까지 머리 못굴릴거같다...ㅋㅋㅋㅋㅋ
  */
 public class BOJ_9663_NQueen {
 
