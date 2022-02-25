@@ -1,7 +1,7 @@
 package com.company.boj.dfs;
 
-import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -39,10 +39,15 @@ public class BOJ_2668_숫자고르기 {
         }
 
         System.out.println(answerList.size());
+        Collections.sort(answerList);
+        for (int i : answerList) {
+            System.out.println(i);
+        }
     }
 
     private static void dfs(int depth, int target) {
 
+        // 사이클이 발생 할 조건. target으로 저장 해 두었던 맨 처음 부모 노드와 값이 똑같아진다.
         if (list[depth] == target) {
             answerList.add(target);
         }
