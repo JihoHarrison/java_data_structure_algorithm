@@ -3,6 +3,10 @@ package com.company.boj.dfs;
 import java.util.*;
 import java.io.*;
 
+/**
+ * 스도쿠처럼 3*3 확인하는 것 까지는 그렇다 치는데 그 그 다음을 어떻게 접근해야하는지 몰랐던 문제
+ **/
+
 public class BOJ_4574_스도미노쿠 {
 
     static int N;
@@ -134,7 +138,6 @@ public class BOJ_4574_스도미노쿠 {
                 System.out.print(map[i][j]);
             }
             System.out.println();
-
         }
     }
 }
