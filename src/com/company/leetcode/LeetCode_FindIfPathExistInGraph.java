@@ -11,35 +11,49 @@ import java.util.List;
  */
 public class LeetCode_FindIfPathExistInGraph {
 
-
     public static void main(String[] args) {
 
+        int[][] edges = {{0, 1}, {1, 2}, {2, 0}};
+        int n = 3;
+        int source = 0;
+        int destination = 2;
+
+        System.out.println(validPath(n, edges, source, destination));
     }
 
     public static boolean validPath(int n, int[][] edges, int source, int destination) {
 
-        List<List<Integer>> lists = new ArrayList<>();
+        List<Integer>[] list = new ArrayList[n];
         boolean[] visited = new boolean[n];
 
-        // 양방향 그래프 생성
-        for (int i = 0; i < edges.length; i++) {
-            int src = edges[i][0];
-            int des = edges[i][1];
-            lists.get(src).add(des);
-            lists.get(des).add(src);
+        for (int i = 0; i < n; i++) {
+            list[i] = new ArrayList<>();
         }
 
-        return dfs(lists, visited, source, destination);
+        for (int i = 0; i < edges.length; i++) {
+            int src = edges[i][0];
+            int dest = edges[i][1];
 
+            list[src].add(dest);
+            list[dest].add(src);
+        }
+
+        return dfs(source, destination, list, visited);
     }
 
-    public static boolean dfs(List<List<Integer>> lists, boolean[] visited, int src, int des) {
-        if (src == des) return true;
-        visited[src] = true;
+    private static boolean dfs(int start, int end, List<Integer>[] list, boolean[] visited) {
 
-        for (int i = 0; i < lists.get(src).size(); i++) {
-            if (!visited[lists.get(src).get(i)]) {
-                if (dfs(lists, visited, lists.get(src).get(i), des)) return true;
+        visited[start] = true;
+
+        if (start == end) {
+            return true;
+        }
+
+        for (int i = 0; i < list[start].size(); i++) {
+            if (!visited[list[start].get(i)]) {
+                if (dfs(list[start].get(i), end, list, visited)) {
+                    return true;
+                }
             }
         }
 
